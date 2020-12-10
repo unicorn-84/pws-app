@@ -1,0 +1,50 @@
+{
+  "name": "template-react-app",
+  "description": "Scaffolding for react app",
+  "version": "0.0.0",
+  "private": true,
+  "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
+  "license": "Apache License 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicorn-84/template-react-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unicorn-84/template-react-app/issues"
+  },
+  "scripts": {
+    "start": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:cover": "react-scripts test --coverage",
+    "serve": "serve -s -n build",
+    "lint:js": "eslint . --ext .js,.jsx --fix",
+    "lint:css": "stylelint './src/**/*.{css,scss,js,jsx}'",
+    "lint": "npm run lint:js && npm run lint:css"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
+    "serve": "^11.3.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
+  }
+}
