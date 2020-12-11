@@ -1,6 +1,6 @@
 {
-  "name": "template-react-app",
-  "description": "Scaffolding for react app",
+  "name": "pws-app",
+  "description": "Personal website react app",
   "version": "0.0.0",
   "private": true,
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
@@ -28,6 +28,7 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1"
   },
