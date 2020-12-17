@@ -17,7 +17,7 @@ export default () => (
       <MainMenu>
         <Link to="/">работы</Link>
         <Link to="/about">обо мне</Link>
-        <Link to="/contact">контакты</Link>
+        <Link to="/contact">контакт</Link>
       </MainMenu>
     </Toolbar>
   </HeaderContainer>

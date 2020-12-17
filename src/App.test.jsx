@@ -22,22 +22,14 @@ describe('App', () => {
   });
 
   test('переход на страницу "/about" при клике "обо мне"', () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>,
-    );
+    render(<App />, { wrapper: BrowserRouter });
     fireEvent.click(screen.getByText(/обо мне/));
     expect(window.location.pathname).toBe('/about');
   });
 
-  test('переход на страницу "/contact" при клике "контакты"', () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>,
-    );
-    fireEvent.click(screen.getByText(/контакты/));
+  test('переход на страницу "/contact" при клике "контакт"', () => {
+    render(<App />, { wrapper: BrowserRouter });
+    fireEvent.click(screen.getByText(/контакт/));
     expect(window.location.pathname).toBe('/contact');
   });
 });

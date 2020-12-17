@@ -6,6 +6,9 @@ import { Switch, Route } from 'react-router-dom';
 import theme from './theme';
 import AppContainer from './App.styles';
 import Header from './components/header/header.component';
+import ProjectsPage from './components/pages/projects-page/projects-page.component';
+import AboutPage from './components/pages/about-page/about-page.component';
+import ContactPage from './components/pages/contact-page/contact-page.component';
 
 export default () => (
   <React.StrictMode>
@@ -14,9 +17,9 @@ export default () => (
       <AppContainer>
         <Header />
         <Switch>
-          <Route exact path="/" />
-          <Route exact path="/about" />
-          <Route exact path="/contact" />
+          <Route exact path="/" component={ProjectsPage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/contact" component={ContactPage} />
         </Switch>
       </AppContainer>
     </ThemeProvider>

@@ -18,6 +18,6 @@ describe('App', () => {
     render(<Header />, { wrapper: MemoryRouter });
     expect(screen.getByText(/работы/)).toBeInTheDocument();
     expect(screen.getByText(/обо мне/)).toBeInTheDocument();
-    expect(screen.getByText(/контакты/)).toBeInTheDocument();
+    expect(screen.getByText(/контакт/)).toBeInTheDocument();
   });
 });
