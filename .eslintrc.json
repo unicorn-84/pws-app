@@ -19,5 +19,7 @@
     "react",
     "html"
   ],
-  "rules": {}
+  "rules": {
+    "react/prop-types": 0
+  }
 }

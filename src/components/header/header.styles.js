@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import theme from '../../theme';
 
@@ -38,23 +39,24 @@ export const BrandTitle = styled.div`
   }
 `;
 
-export const MainMenu = styled.nav`
-  > a {
-    margin-left: ${theme.spacing(2)}px;
-    margin-right: ${theme.spacing(2)}px;
-    text-decoration: none;
-    color: inherit;
-    font-size: 1.2rem;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+export const MainMenu = styled.nav``;
 
-    :hover {
-      color: ${theme.palette.primary.main};
-      border-color: ${theme.palette.primary.main};
-    }
+export const MenuLink = styled(Link)`
+  margin-left: ${theme.spacing(2)}px;
+  margin-right: ${theme.spacing(2)}px;
+  text-decoration: none;
+  color: ${({ active }) => (active ? theme.palette.primary.main : 'inherit')};
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-bottom: 1px solid;
+  border-color: ${({ active }) => (active ? theme.palette.primary.main : 'rgba(0, 0, 0, 0.2)')};
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  :hover {
+    color: ${theme.palette.primary.main};
+    border-color: ${theme.palette.primary.main};
   }
 `;
 
