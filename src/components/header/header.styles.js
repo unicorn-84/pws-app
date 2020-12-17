@@ -51,8 +51,7 @@ export const MainMenu = styled.nav`
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    :hover,
-    :focus {
+    :hover {
       color: ${theme.palette.primary.main};
       border-color: ${theme.palette.primary.main};
     }

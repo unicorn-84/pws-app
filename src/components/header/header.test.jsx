@@ -1,20 +1,21 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+
 import Header from './header.component';
 
 describe('App', () => {
   test('renders Header component', () => {
-    render(<Header />);
-    screen.debug();
+    render(<Header />, { wrapper: MemoryRouter });
   });
 
   test('renders brand title', () => {
-    render(<Header />);
-    expect(screen.getByText(/vkapitonov.ru/)).toBeInTheDocument();
+    render(<Header />, { wrapper: MemoryRouter });
+    expect(screen.getByText(/vkapitonov\.ru/)).toBeInTheDocument();
   });
 
   test('renders main menu', () => {
-    render(<Header />);
+    render(<Header />, { wrapper: MemoryRouter });
     expect(screen.getByText(/работы/)).toBeInTheDocument();
     expect(screen.getByText(/обо мне/)).toBeInTheDocument();
     expect(screen.getByText(/контакты/)).toBeInTheDocument();

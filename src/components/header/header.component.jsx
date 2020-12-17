@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   HeaderContainer,
@@ -11,12 +12,12 @@ export default () => (
   <HeaderContainer>
     <Toolbar>
       <BrandTitle>
-        <a href="/">vkapitonov.ru</a>
+        <Link to="/">vkapitonov.ru</Link>
       </BrandTitle>
       <MainMenu>
-        <a href="/">работы</a>
-        <a href="/about">обо мне</a>
-        <a href="/contacts">контакты</a>
+        <Link to="/">работы</Link>
+        <Link to="/about">обо мне</Link>
+        <Link to="/contact">контакты</Link>
       </MainMenu>
     </Toolbar>
   </HeaderContainer>

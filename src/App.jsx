@@ -1,6 +1,7 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
+import { Switch, Route } from 'react-router-dom';
 
 import theme from './theme';
 import AppContainer from './App.styles';
@@ -12,6 +13,11 @@ export default () => (
       <CssBaseline />
       <AppContainer>
         <Header />
+        <Switch>
+          <Route exact path="/" />
+          <Route exact path="/about" />
+          <Route exact path="/contact" />
+        </Switch>
       </AppContainer>
     </ThemeProvider>
   </React.StrictMode>
