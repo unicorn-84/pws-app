@@ -9,6 +9,7 @@ import Header from './components/header/header.component';
 import ProjectsPage from './components/pages/projects-page/projects-page.component';
 import AboutPage from './components/pages/about-page/about-page.component';
 import ContactPage from './components/pages/contact-page/contact-page.component';
+import NotFoundPage from './components/pages/not-found-page/not-found-page.component';
 
 export default () => (
   <React.StrictMode>
@@ -20,6 +21,7 @@ export default () => (
           <Route exact path="/" component={ProjectsPage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/contact" component={ContactPage} />
+          <Route path="*" component={NotFoundPage} />
         </Switch>
       </AppContainer>
     </ThemeProvider>
