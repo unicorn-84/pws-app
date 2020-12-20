@@ -8,19 +8,30 @@ import {
   MainMenu,
   MenuLink,
 } from './header.styles';
+import Container from '../container/container.component';
 
-const Header = ({ location: { pathname } }) => (
+const Header = ({ location }) => (
   <HeaderContainer>
-    <Toolbar>
-      <BrandTitle>
-        <Link to="/">vkapitonov.ru</Link>
-      </BrandTitle>
-      <MainMenu>
-        <MenuLink active={pathname === '/' ? 'active' : null} to="/">работы</MenuLink>
-        <MenuLink active={pathname === '/about' ? 'active' : null} to="/about">обо мне</MenuLink>
-        <MenuLink active={pathname === '/contact' ? 'active' : null} to="/contact">контакт</MenuLink>
-      </MainMenu>
-    </Toolbar>
+    <Container maxWidth="1200">
+      <Toolbar>
+        <BrandTitle>
+          <Link to="/">
+            vkapitonov.ru
+          </Link>
+        </BrandTitle>
+        <MainMenu>
+          <MenuLink to="/" active={location.pathname === '/' ? 'active' : null}>
+            работы
+          </MenuLink>
+          <MenuLink to="/about" active={location.pathname === '/about' ? 'active' : null}>
+            обо мне
+          </MenuLink>
+          <MenuLink to="/contact" active={location.pathname === '/contact' ? 'active' : null}>
+            контакт
+          </MenuLink>
+        </MainMenu>
+      </Toolbar>
+    </Container>
   </HeaderContainer>
 );
 

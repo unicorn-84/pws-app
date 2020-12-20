@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-const ContactPageContainer = styled.div``;
+import Page from '../page.component';
 
-export default ContactPageContainer;
+export default styled(Page)``;

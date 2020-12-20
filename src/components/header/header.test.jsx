@@ -5,7 +5,7 @@ import { MemoryRouter, BrowserRouter } from 'react-router-dom';
 import Header from './header.component';
 import theme from '../../theme';
 
-describe('App', () => {
+describe('Header', () => {
   test('renders Header component', () => {
     render(<Header />, { wrapper: MemoryRouter });
   });

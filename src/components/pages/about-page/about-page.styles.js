@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-const AboutPageContainer = styled.div``;
+import Page from '../page.component';
 
-export default AboutPageContainer;
+export default styled(Page)``;

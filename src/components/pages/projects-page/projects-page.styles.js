@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-const ProjectsPageContainer = styled.div``;
+import Page from '../page.component';
 
-export default ProjectsPageContainer;
+export default styled(Page)``;

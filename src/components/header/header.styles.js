@@ -4,32 +4,21 @@ import { Link } from 'react-router-dom';
 import theme from '../../theme';
 
 export const HeaderContainer = styled.header`
-  width: 100%;
   background-color: #fff;
-  display: flex;
-  z-index: 1100;
-  flex-shrink: 0;
-  flex-direction: column;
-  top: 0;
-  left: auto;
-  right: 0;
-  position: fixed;
 `;
 
 export const Toolbar = styled.div`
-  min-height: 64px;
-  width: 100%;
-  max-width: 1140px;
-  padding-right: ${theme.spacing(3)}px;
-  padding-left: ${theme.spacing(3)}px;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 40px;
+  align-self: center;
 `;
 
 export const BrandTitle = styled.div`
-  flex-grow: 1;
+  @media (max-width: 563px) {
+    justify-self: center;
+  }
 
   > a {
     font-size: 1.5rem;
@@ -39,11 +28,15 @@ export const BrandTitle = styled.div`
   }
 `;
 
-export const MainMenu = styled.nav``;
+export const MainMenu = styled.nav`
+  justify-self: end;
+
+  @media (max-width: 563px) {
+    justify-self: center;
+  }
+`;
 
 export const MenuLink = styled(Link)`
-  margin-left: ${theme.spacing(2)}px;
-  margin-right: ${theme.spacing(2)}px;
   text-decoration: none;
   color: ${({ active }) => (active ? theme.palette.primary.main : 'inherit')};
   font-size: 1.2rem;
@@ -53,6 +46,11 @@ export const MenuLink = styled(Link)`
   transition: all 0.2s ease;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-right: ${theme.spacing(3)}px;
+
+  :last-child {
+    margin-right: 0;
+  }
 
   :hover {
     color: ${theme.palette.primary.main};
