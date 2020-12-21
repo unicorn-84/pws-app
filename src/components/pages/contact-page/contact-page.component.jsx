@@ -4,6 +4,7 @@ import ContactPageContainer from './contact-page.styles';
 
 export default () => (
   <ContactPageContainer>
-    Contact
+    <h3>unicorn-84@ya.ru</h3>
+    <h3>dev.kapitonov@gmail.com</h3>
   </ContactPageContainer>
 );
