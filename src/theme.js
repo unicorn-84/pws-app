@@ -16,4 +16,12 @@ export default createMuiTheme({
       },
     },
   },
+  props: {
+    header: {
+      height: {
+        mobile: 100,
+        desktop: 80,
+      },
+    },
+  },
 });

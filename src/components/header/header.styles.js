@@ -11,23 +11,23 @@ export const Toolbar = styled.div`
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 40px;
+  grid-auto-rows: ${theme.props.header.height.desktop / 2}px;
   align-self: center;
   align-items: center;
 
-  @media (max-width: 575px) {
-    grid-auto-rows: 50px;
+  @media (max-width: 562px) {
+    grid-auto-rows: ${theme.props.header.height.mobile / 2}px;
   }
 `;
 
 export const BrandTitle = styled.div`
-  @media (max-width: 575px) {
+  @media (max-width: 562px) {
     justify-self: center;
   }
 
   > a {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     color: inherit;
   }
@@ -36,7 +36,7 @@ export const BrandTitle = styled.div`
 export const MainMenu = styled.nav`
   justify-self: end;
 
-  @media (max-width: 575px) {
+  @media (max-width: 562px) {
     justify-self: center;
   }
 `;
